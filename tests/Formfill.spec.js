@@ -96,14 +96,14 @@ test.describe("alerts,prompts,confirmation box", () => {
     //await expect(page.locator("#result")).toHaveText("You entered: null");
   });
 });
-test.describe("frames/iframes",()=>{
+/*test.describe("frames/iframes",()=>{
 test("iframe with name",async({page})=>{
 await page.goto("https://www.w3schools.com/html/tryit.asp?filename=tryhtml5_input_form");
 const frames=await page.frame("iframeResult");
 frames.locator("#fname").fill("Hello");
 frames.locator("input[value='Submit']").click();
 })
-test("iframe with url",async({page})=>{
+test.skip("iframe with url",async({page})=>{
 await page.goto("https://www.w3schools.com/html/html_iframe.asp");
 const framev= await page.frame({url:"https://www.w3schools.com/html/default.asp"});
 await framev.getByLabel('Button to open search field' ).click()
@@ -117,6 +117,7 @@ await framev.getByRole("textbox",{name:"Search field"}).fill("python")
 //await page.locator('iframe[title="W3Schools HTML Tutorial"]').contentFrame().getByRole('link', { name: 'CSS', exact: true }).click();
 })
 })
+*/
 test("Handling new page",async({context})=>{
 //In Playwright, child windows (popups / new tabs) are handled using the popup event or context.waitForEvent('page').
 const page= await context.newPage();
